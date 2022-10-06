@@ -1,6 +1,6 @@
 {
 	"name": "easy-auto-launch",
-	"version": "6.0.5",
+	"version": "6.0.6",
 	"description": "Launch node applications or executables at login (Mac, Windows, and Linux)",
 	"main": "dist/easy-auto-launch.js",
 	"types": "dist/easy-auto-launch.d.ts",
@@ -8,7 +8,7 @@
 		"build": "npm run clean && tsc",
 		"postbuild": "copyfiles -f src/easy-auto-launch.d.ts dist",
 		"clean": "del-cli dist",
-		"prepare": "npm run build"
+		"postinstall": "npm run build"
 	},
 	"engines": {
 		"node": ">=4.0.0"
