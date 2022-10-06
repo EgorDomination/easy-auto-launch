@@ -25,7 +25,7 @@ export function enable({ appName, appPath, isHiddenOnLaunch }: {
 		Type=Application
 		Version=1.0
 		Name=${appName}
-		Comment=${appName}startup script
+		Comment=${appName} startup script
 		Exec=${appPath}${hiddenArg}
 		StartupNotify=false
 		Terminal=false
