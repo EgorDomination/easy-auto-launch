@@ -1,6 +1,6 @@
 {
 	"name": "easy-auto-launch",
-	"version": "6.0.2",
+	"version": "6.0.3",
 	"description": "Launch node applications or executables at login (Mac, Windows, and Linux)",
 	"main": "dist/easy-auto-launch.js",
 	"types": "dist/easy-auto-launch.d.ts",
