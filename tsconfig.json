@@ -1,11 +1,12 @@
 {
 	"compilerOptions": {
 		"baseUrl": "./",
-		"target": "ESNext",
+		"target": "ES6",
 		"strict": true,
-		"module": "commonjs",
+		"module": "ES6",
 		"esModuleInterop": true,
 		"outDir": "./dist/",
+		"moduleResolution":"node",
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noImplicitReturns": false
