@@ -5,8 +5,8 @@
 	"main": "dist/easy-auto-launch.js",
 	"types": "dist/easy-auto-launch.d.ts",
 	"scripts": {
-		"build": "yarn run clean && yarn run tsc",
-		"postbuild": "yarn copyfiles -f src/easy-auto-launch.d.ts dist",
+		"build": "npm run clean && tsc",
+		"postbuild": "copyfiles -f src/easy-auto-launch.d.ts dist",
 		"clean": "del-cli dist",
 		"prepare": "npm run build"
 	},
