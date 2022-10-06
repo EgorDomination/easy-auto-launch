@@ -7,7 +7,8 @@
 	"scripts": {
 		"build": "yarn run clean && yarn run tsc",
 		"postbuild": "yarn copyfiles -f src/easy-auto-launch.d.ts dist",
-		"clean": "del-cli dist"
+		"clean": "del-cli dist",
+		"prepare": "yarn run build"
 	},
 	"engines": {
 		"node": ">=4.0.0"
