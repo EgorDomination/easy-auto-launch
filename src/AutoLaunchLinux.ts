@@ -20,16 +20,14 @@ export function enable({ appName, appPath, isHiddenOnLaunch }: {
 }) {
 	const hiddenArg = isHiddenOnLaunch ? " --hidden" : "";
 
-	const data = `
-		[Desktop Entry]
-		Type=Application
-		Version=1.0
-		Name=${appName}
-		Comment=${appName} startup script
-		Exec=${appPath}${hiddenArg}
-		StartupNotify=false
-		Terminal=false
-	`;
+	const data = `[Desktop Entry]
+Name=${appName}
+Exec=${appPath}${hiddenArg}
+Terminal=false
+Type=Application
+Comment=${appName} startup script
+StartupNotify=false
+`;
 
 	return createFile({
 		data,
