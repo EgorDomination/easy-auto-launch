@@ -27,7 +27,7 @@ export default class AutoLaunch {
 		this.enable = this.enable.bind(this);
 		this.disable = this.disable.bind(this);
 		this.isEnabled = this.isEnabled.bind(this);
-		this.fixLinuxExecPath = this.fixLinuxExecPath.bind(this);
+		// this.fixLinuxExecPath = this.fixLinuxExecPath.bind(this);
 		this.fixOpts = this.fixOpts.bind(this);
 		if (name == null) {
 			throw new Error("You must specify a name");
@@ -64,7 +64,7 @@ export default class AutoLaunch {
 		}
 
 		this.fixOpts();
-		this.fixLinuxExecPath();
+		// this.fixLinuxExecPath();
 
 		this.api = null;
 		if (/^win/.test(process.platform)) {
@@ -119,16 +119,16 @@ export default class AutoLaunch {
 		return path;
 	}
 
-	fixLinuxExecPath(): string | undefined {
-		// This is going to escape the spaces in the executable path
-		// Fixing all problems with unescaped paths for Linux
-		if (/linux/.test(process.platform) && this.options.appPath) {
-			return (this.options.appPath = this.options.appPath.replace(
-				/(\s+)/g,
-				"\\$1"
-			));
-		}
-	}
+	// fixLinuxExecPath(): string | undefined {
+	// 	// This is going to escape the spaces in the executable path
+	// 	// Fixing all problems with unescaped paths for Linux
+	// 	if (/linux/.test(process.platform) && this.options.appPath) {
+	// 		return (this.options.appPath = this.options.appPath.replace(
+	// 			/(\s+)/g,
+	// 			"\\$1"
+	// 		));
+	// 	}
+	// }
 
 	fixOpts() {
 		let tempPath;

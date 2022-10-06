@@ -22,7 +22,7 @@ export function enable({ appName, appPath, isHiddenOnLaunch }: {
 
 	const data = `[Desktop Entry]
 Name=${appName}
-Exec=${appPath}${hiddenArg}
+Exec="${appPath}"${hiddenArg}
 Terminal=false
 Type=Application
 Comment=${appName} startup script
