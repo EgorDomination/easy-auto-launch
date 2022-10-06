@@ -8,7 +8,7 @@
 		"build": "del-cli dist && tsc",
 		"postbuild": "copyfiles -f src/easy-auto-launch.d.ts dist",
 		"clean": "del-cli dist",
-		"postinstall": "del-cli dist && tsc && copyfiles -f src/easy-auto-launch.d.ts dist"
+		"postinstall": "npm run build || yarn run build"
 	},
 	"engines": {
 		"node": ">=4.0.0"
